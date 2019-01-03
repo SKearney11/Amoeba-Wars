@@ -149,9 +149,11 @@ class GameScene: SKScene {
     }
     func fowleriPressed() {
         print("fowleri pressed!")
+        entityManager.spawnFowleri(team: .teamLeft)
     }
     func proteusPressed(){
         print("proteus pressed!")
+        entityManager.spawnProteus(team: .teamLeft)
     }
 }
 

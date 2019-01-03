@@ -37,6 +37,8 @@
 		D934387021DDD317007CFA61 /* Histolytica.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934386F21DDD317007CFA61 /* Histolytica.swift */; };
 		D934387221DDD45F007CFA61 /* MoveBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387121DDD45F007CFA61 /* MoveBehavior.swift */; };
 		D934387421DDD494007CFA61 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387321DDD494007CFA61 /* MoveComponent.swift */; };
+		D934387621DDD7EE007CFA61 /* Fowleri.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387521DDD7EE007CFA61 /* Fowleri.swift */; };
+		D934387821DDD802007CFA61 /* Proteus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387721DDD802007CFA61 /* Proteus.swift */; };
 		D9662EFD21AEF6C900357EDA /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9662EFC21AEF6C900357EDA /* SpriteComponent.swift */; };
 		D9662EFF21AF007900357EDA /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9662EFE21AF007900357EDA /* Base.swift */; };
 		D9662F0121AF00CE00357EDA /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9662F0021AF00CE00357EDA /* EntityManager.swift */; };
@@ -75,6 +77,8 @@
 		D934386F21DDD317007CFA61 /* Histolytica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Histolytica.swift; sourceTree = "<group>"; };
 		D934387121DDD45F007CFA61 /* MoveBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBehavior.swift; sourceTree = "<group>"; };
 		D934387321DDD494007CFA61 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
+		D934387521DDD7EE007CFA61 /* Fowleri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fowleri.swift; sourceTree = "<group>"; };
+		D934387721DDD802007CFA61 /* Proteus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proteus.swift; sourceTree = "<group>"; };
 		D9662EFC21AEF6C900357EDA /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		D9662EFE21AF007900357EDA /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		D9662F0021AF00CE00357EDA /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				D9662EFE21AF007900357EDA /* Base.swift */,
 				D9662F0021AF00CE00357EDA /* EntityManager.swift */,
 				D934386F21DDD317007CFA61 /* Histolytica.swift */,
+				D934387521DDD7EE007CFA61 /* Fowleri.swift */,
+				D934387721DDD802007CFA61 /* Proteus.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D934387621DDD7EE007CFA61 /* Fowleri.swift in Sources */,
 				D934386E21DDD125007CFA61 /* BaseComponent.swift in Sources */,
+				D934387821DDD802007CFA61 /* Proteus.swift in Sources */,
 				D9662F0121AF00CE00357EDA /* EntityManager.swift in Sources */,
 				D934387221DDD45F007CFA61 /* MoveBehavior.swift in Sources */,
 				D934386C21DDD01C007CFA61 /* TeamComponent.swift in Sources */,

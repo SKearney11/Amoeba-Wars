@@ -18,16 +18,19 @@ class GameScene: SKScene {
     
     let coinLeftLabel = SKLabelNode(fontNamed: "Courier-Bold")
     let coinRightLabel = SKLabelNode(fontNamed: "Courier-Bold")
+    let gameovertext = SKLabelNode(fontNamed: "Courier-Bold")
     
     var lastUpdateTimeInterval: TimeInterval = 0
     
     var gameOver = false
     
     var entityManager: EntityManager!
+    var p2: EnemyAI?
     
     override func didMove(to view: SKView) {
         // Create entity manager
         entityManager = EntityManager(scene: self)
+        p2 = EnemyAI(entityManager: entityManager)
         // Start background music
         let bgMusic = SKAudioNode(fileNamed: SoundFile.BackgroundMusic)
         bgMusic.autoplayLooped = true
@@ -36,7 +39,6 @@ class GameScene: SKScene {
         // Add background
         var background: SKSpriteNode!
         background = SKSpriteNode(imageNamed: ImageName.Background)
-        //background.anchorPoint = CGPoint(x: 0, y:0)
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.size = self.size
         background.zPosition = Layer.Background
@@ -114,12 +116,7 @@ class GameScene: SKScene {
         let touchLocation = touch.location(in: self)
         print("\(touchLocation)")
         
-        if gameOver {
-            let newScene = GameScene(size: size)
-            newScene.scaleMode = scaleMode
-            view?.presentScene(newScene, transition: SKTransition.flipHorizontal(withDuration: 0.5))
-            return
-        }
+        
         
     }
     
@@ -139,6 +136,41 @@ class GameScene: SKScene {
         if let playerRight = entityManager.base(for: .teamRight),
             let playerRightBase = playerRight.component(ofType: BaseComponent.self) {
             coinRightLabel.text = "\(playerRightBase.coins)"
+            p2?.Play(coins: playerRightBase.coins)
+        }
+        
+        //check if dead
+        if let leftHealth = entityManager.base(for: .teamLeft)?.component(ofType: HealthComponent.self) {
+            if leftHealth.health <= 0 {
+                print("Right Player Wins!")
+                gameovertext.fontSize = 50
+                gameovertext.fontColor = SKColor.black
+                gameovertext.position = CGPoint(x: size.width/2, y:size.height/2)
+                gameovertext.zPosition = Layer.HUD
+                gameovertext.text = "Right Player Wins!!"
+                self.addChild(gameovertext)
+                gameOver = true
+                let newScene = GameScene(size: self.size)
+                newScene.scaleMode = self.scaleMode
+                let animation = SKTransition.fade(withDuration: 1.0)
+                self.view?.presentScene(newScene, transition: animation)
+            }
+        }
+        if let rightHealth = entityManager.base(for: .teamRight)?.component(ofType: HealthComponent.self) {
+            if rightHealth.health <= 0 {
+                print("Left Player Wins!")
+                gameovertext.fontSize = 50
+                gameovertext.fontColor = SKColor.black
+                gameovertext.position = CGPoint(x: size.width/2, y:size.height/2)
+                gameovertext.zPosition = Layer.HUD
+                gameovertext.text = "Left Player Wins!!"
+                self.addChild(gameovertext)
+                gameOver = true
+                let newScene = GameScene(size: self.size)
+                newScene.scaleMode = self.scaleMode
+                let animation = SKTransition.fade(withDuration: 1.0)
+                self.view?.presentScene(newScene, transition: animation)
+            }
         }
     }
     

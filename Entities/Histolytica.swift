@@ -20,6 +20,7 @@ class Histolytica: GKEntity {
         addComponent(TeamComponent(team: team))
         
         addComponent(MoveComponent(maxSpeed: 150, maxAcceleration: 5, radius: Float(texture.size().width * 0.3), entityManager: entityManager))
+        addComponent(HealthComponent(health: 10, damage: 5, team: team, entityManager: entityManager))
     }
     
     required init?(coder aDecoder: NSCoder) {

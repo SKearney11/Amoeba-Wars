@@ -5,7 +5,8 @@ class EntityManager {
     lazy var componentSystems: [GKComponentSystem] = {
         let baseSystem = GKComponentSystem(componentClass: BaseComponent.self)
         let moveSystem = GKComponentSystem(componentClass: MoveComponent.self)
-        return [baseSystem, moveSystem]
+        let healthSystem = GKComponentSystem(componentClass: HealthComponent.self)
+        return [baseSystem, moveSystem, healthSystem]
     }()
     // 1
     var entities = Set<GKEntity>()

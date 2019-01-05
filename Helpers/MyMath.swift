@@ -106,6 +106,10 @@ extension CGPoint {
     var angle: CGFloat {
         return atan2(y, x)
     }
+    
+    func distance(point: CGPoint) -> CGFloat {
+        return abs(CGFloat(hypotf(Float(point.x - x), Float(point.y - y))))
+    }
 }
 
 extension CGFloat {

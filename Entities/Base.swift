@@ -25,6 +25,7 @@ class Base: GKEntity {
         addComponent(BaseComponent())
         
         addComponent(MoveComponent(maxSpeed: 0, maxAcceleration: 0, radius: Float(spriteComponent.node.size.width / 2), entityManager: entityManager))
+        addComponent(HealthComponent(health: 100, damage: 0, team: team, entityManager: entityManager))
     }
     
     required init?(coder aDecoder: NSCoder) {

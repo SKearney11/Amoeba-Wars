@@ -39,6 +39,8 @@
 		D934387421DDD494007CFA61 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387321DDD494007CFA61 /* MoveComponent.swift */; };
 		D934387621DDD7EE007CFA61 /* Fowleri.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387521DDD7EE007CFA61 /* Fowleri.swift */; };
 		D934387821DDD802007CFA61 /* Proteus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387721DDD802007CFA61 /* Proteus.swift */; };
+		D934387A21E14480007CFA61 /* EnemyAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387921E14480007CFA61 /* EnemyAI.swift */; };
+		D934387C21E151B2007CFA61 /* HealthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934387B21E151B2007CFA61 /* HealthComponent.swift */; };
 		D9662EFD21AEF6C900357EDA /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9662EFC21AEF6C900357EDA /* SpriteComponent.swift */; };
 		D9662EFF21AF007900357EDA /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9662EFE21AF007900357EDA /* Base.swift */; };
 		D9662F0121AF00CE00357EDA /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9662F0021AF00CE00357EDA /* EntityManager.swift */; };
@@ -79,6 +81,8 @@
 		D934387321DDD494007CFA61 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 		D934387521DDD7EE007CFA61 /* Fowleri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fowleri.swift; sourceTree = "<group>"; };
 		D934387721DDD802007CFA61 /* Proteus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proteus.swift; sourceTree = "<group>"; };
+		D934387921E14480007CFA61 /* EnemyAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyAI.swift; sourceTree = "<group>"; };
+		D934387B21E151B2007CFA61 /* HealthComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthComponent.swift; sourceTree = "<group>"; };
 		D9662EFC21AEF6C900357EDA /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		D9662EFE21AF007900357EDA /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		D9662F0021AF00CE00357EDA /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				D934386D21DDD125007CFA61 /* BaseComponent.swift */,
 				D934387121DDD45F007CFA61 /* MoveBehavior.swift */,
 				D934387321DDD494007CFA61 /* MoveComponent.swift */,
+				D934387B21E151B2007CFA61 /* HealthComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				D934386F21DDD317007CFA61 /* Histolytica.swift */,
 				D934387521DDD7EE007CFA61 /* Fowleri.swift */,
 				D934387721DDD802007CFA61 /* Proteus.swift */,
+				D934387921E14480007CFA61 /* EnemyAI.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D934387621DDD7EE007CFA61 /* Fowleri.swift in Sources */,
+				D934387C21E151B2007CFA61 /* HealthComponent.swift in Sources */,
 				D934386E21DDD125007CFA61 /* BaseComponent.swift in Sources */,
 				D934387821DDD802007CFA61 /* Proteus.swift in Sources */,
 				D9662F0121AF00CE00357EDA /* EntityManager.swift in Sources */,
@@ -284,6 +291,7 @@
 				D919C37721A829F4005E9A50 /* MyMath.swift in Sources */,
 				D919C33D21A824F8005E9A50 /* AppDelegate.swift in Sources */,
 				D919C35D21A826A5005E9A50 /* Constants.swift in Sources */,
+				D934387A21E14480007CFA61 /* EnemyAI.swift in Sources */,
 				D9662EFF21AF007900357EDA /* Base.swift in Sources */,
 				D934387421DDD494007CFA61 /* MoveComponent.swift in Sources */,
 				D919C37921A82A18005E9A50 /* SoundManager.swift in Sources */,
